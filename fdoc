@@ -1,0 +1,5 @@
+#!/bin/bash
+start="https://www.beyondminds.org/archives/files/Documentaries"
+url=$(cat /home/cirrus/Documents/docu1.txt |  sed 's/^.\{57\}//' | fzf  --ansi -m --color dark,hl:172,hl+:46,fg+:46,bg+:235 --color info:150,prompt:46,spinner:150,pointer:46,marker:7,border:46 --border=sharp  --prompt='➤ ' --pointer='➤ ' --marker='➤ '  --exit-0   )
+ #wget
+  mpv "$start/$url"
